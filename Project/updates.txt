@@ -1,0 +1,7 @@
+Make it more obvious that the 'simulate mandelbot' is a link
+Add in some information about what each parameter does, as well as the ranges of valid values for each parameter
+
+
+
+
+
