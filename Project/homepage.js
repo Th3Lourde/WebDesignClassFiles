@@ -1,69 +1,82 @@
 
 
-function update_start(a){
-  $('#start_text').html(a);
-}
+$("#start_text").click(function(){
+  // var counter=setInterval(timer, 1000);
+  var count = 4;
 
-// update_start(1);
+  function show_intro_text(){
+    $('.welcome-moving').transition({ y: '-100vh', delay:600});
+    // $('.welcome-moving').transition({ y: '100vh'});
+    // $('.welcome-moving').transition({ y: '100vh'});
+    // $('.welcome-moving').transition({ y: '-100vh'});
+    // $('.welcome-moving').transition({ y: '-100vh'});
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+    // $('.').transition({
+    //   perspective: '100px',
+    //   rotateY: '180deg'
+    // });
 
-async function demo() {
-  console.log('Taking a break...');
-  await sleep(2000);
-  console.log('Two seconds later');
-}
+    var letters = [".one", ".two", ".three", ".four", ".five", ".six", ".seven", ".eight", ".nine", ".ten", ".eleven", ".twelve", ".thirteen", ".fourteen", ".fifteen", ".sixteen", ".seventeen", ".eighteen", ".nineteen", ".twenty", ".twenty-one", ".twenty-two", ".twenty-three", ".twenty-four", ".twenty-five", ".twenty-six", ".twenty-seven", ".twenty-eight"];
 
 
-var timesRun = 0;
-var go = true;
+    var hang = 900;
 
-$('#start').hover(function(){
-    console.log('go');
-    var interval = setInterval(function(){
-        if (go){
-          if (timesRun < 3 && timesRun >= 0 && go){
-            timesRun += 1;
-            update_start(timesRun);
+    var i;
+    for (i = 0; i < letters.length; i++) {
+      $(letters[i]).transition({ opacity: 100, delay: hang });
+      hang += 50;
+    }
 
-          } else if (timesRun === 3){
-            // Stop the interval
-            alert("Boom");
-            clearInterval(interval);
-            timesRun = -1;
-          }
+    var letters = [".one-1",".one-2",".one-3",".one-4"];
 
-          // if (timesRun === 3 || timesRun > 3){
-          //   clearInterval(interval);
-          // }
-        }
-    }, 1000);
+    var hang = 2600;
+    for (i = 0; i < letters.length; i++) {
+      $(letters[i]).transition({ textDecoration: 'underline', textDecorationColor:'#FF4136' , delay: hang });
+      hang += 50;
+    }
+
+    // $('.fade_in').transition({ opacity: 100, delay: 500 });
+    // $('.one').transition({ opacity: 100, delay: 500 });
+    // $('.two').transition({ opacity: 100, delay: 585 });
+    // $('.three').transition({ opacity: 100, delay: 625 });
+    // $('.four').transition({ opacity: 100, delay: 710 });
+    // $('.five').transition({ opacity: 100, delay: 785 });
+    // $('.six').transition({ opacity: 100, delay: 835 });
+
+
   }
-)
-
-$('#start').mouseout(function(){
-  timesRun = 0;
-  go = false;
-  $('#start_text').html("Ready?");
-  demo();
-  go = true;
-})
-
-// var timesRun = 0;
-// var interval = setInterval(function(){
-//     timesRun += 1;
-//     if(timesRun === 60){
-//         clearInterval(interval);
-//     }
-//     //do whatever here..
-// }, 2000);
 
 
 
+  function phase1(){
+    $('.ready-container').transition({ y: '40px' });
+    $('.ready-container').transition({ y: '-800px' });
 
 
-// $( document ).ready(function() {
-//   main();
-// });
+
+    $('.skip-tutorial-container').transition({ y: '40px' });
+    $('.skip-tutorial-container').transition({ y: '-800px' });
+
+    show_intro_text();
+  }
+
+  phase1();
+
+  function timer(){
+    var text = $("#start_text").html();
+    console.log(text)
+    if (count === 0){
+      clearInterval(counter);
+      console.log("Phase 1");
+      phase1();
+    } else {
+      count = count - 1;
+      if (count === 0){
+        $("#start_text").html("Go");
+      } else {
+        $("#start_text").html(count);
+      }
+    }
+  }
+
+});
