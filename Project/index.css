@@ -22,6 +22,7 @@ input {
   /* background-color: purple; */
   /* background-color: #34A2B8; */
   /* background-color: black; */
+  /* background-color: #141414; */
   background-color: #141414;
 }
 
@@ -29,7 +30,7 @@ input {
   width: calc(100vw - 30px);
   height:calc(10vh - 25px);
   /* background-color: grey; */
-  background-color: black;
+  /* background-color: black; */
   color:white;
   padding-top: 25px;
   padding-left: 30px;
