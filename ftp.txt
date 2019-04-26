@@ -1,0 +1,5 @@
+ftp user@ftpdomain.com
+
+
+
+ftp -v ftp.art65-02.lmi.net

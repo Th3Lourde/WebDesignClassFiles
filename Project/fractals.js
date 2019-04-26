@@ -22,7 +22,6 @@ function create_canvas() {
 
 function change_color(input){
   ctx.fillRect(0,0,150,150);
-
 }
 
 function get_diff(){
@@ -110,12 +109,16 @@ function checkIfBelongsToMandelbrotSet(x, y, data) {
 }
 
 function get_mandel(){
-  var mag_factor = $("[name=mag_factor]").val();
-  var pan_x = $("[name=pan_x]").val();
-  var pan_y = $("[name=pan_y]").val();
+  // var mag_factor = $("[name=mag_factor]").val();
+  // var pan_x = $("[name=pan_x]").val();
+  // var pan_y = $("[name=pan_y]").val();
   var max_iterations = $("[name=max_it]").val();
   var reach = $("[name=reach]").val();
   var hsl = $("[name=hsl]").val();
+
+  mag_factor = "400";
+  pan_x = "2";
+  pan_y = "1";
 
   var data = [mag_factor, pan_x, pan_y, max_iterations, reach,  hsl];
 
@@ -159,18 +162,30 @@ function create_mandel(data){
 
 function submit() {
   input = get_mandel();
+  console.log(input);
   create_mandel(input);
 
-  // Get the type of fractal
-  // var fractal_type = $("[name=cars]").val();
-  //
-  // if (fractal_type == "Mandelbrot"){
-  //   var input;
-  //   input = get_mandel();
+  // input
+
+  // // Script for downloading stuff
+  // for (var i = 0; i <= 360; i++) {
+  //   input[5] = i.toString();
   //   create_mandel(input);
-  // } else {
-  //   alert("other :)");
+  //   // console.log(input);
+  //   // download
+  //   image = $('#frac1')[0].toDataURL("image/png");
+  //   var link = document.createElement('a');
+  //   link.download = "hsl_"+i.toString()+".png";
+  //   link.href = image;
+  //   link.click();
   // }
+
+  // Now we might want to save the fractal that we have just created
+  // image = $('#frac1')[0].toDataURL("image/png");
+  // var link = document.createElement('a');
+  // link.download = "echo.png";
+  // link.href = image;
+  // link.click();
 }
 
 
