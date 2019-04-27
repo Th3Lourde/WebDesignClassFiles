@@ -32,18 +32,24 @@
           </select>
         </div> -->
         <h2 class="side-menu">Max Iterations:</h2>
-        <input type="text" name="max_it" value="100">
-        <h2 class="side-menu">Reach Threshold</h2>
+        <!-- <input type="text" name="max_it" value="100"> -->
+        <!-- <h2 class="padding-below">10&le;<input name="max_it" placeholder="100">100</input>&le;200</h2> -->
 
-        <input type="text" name="reach" value="185">
+        <h2>10 &le; <input type="text" name="max_it" value="101"> &le; 200</h2>
+
+        <h2 class="side-menu">Reach Threshold:</h2>
+
+        <!-- <input type="text" name="reach" value="185"> -->
+        <h2>10 &le; <input type="text" name="reach" value="185"> &le; 300</h2>
         <!-- <h2 class="side-menu">Magnification Factor</h2>
         <input type="text" name="mag_factor" value="400"> -->
         <!-- <h2 class="side-menu">Pan X</h2>
         <input type="text" name="pan_x" value="2">
         <h2 class="side-menu">Pan Y</h2>
         <input type="text" name="pan_y" value="1"> -->
-        <h2 class="side-menu">HSL Color</h2>
-        <input type="text" name="hsl" value="0">
+        <h2 class="side-menu">HSL Color:</h2>
+        <!-- <input type="text" name="hsl" value="0"> -->
+        <h2>0 &le; <input class="last_input" type="text" name="hsl" value="0"> &le; 360</h2>
         <br>
         <!-- <div class="real-time-div">
 
@@ -51,13 +57,14 @@
         <!-- <button type="button" name="button" onclick="submit()">Submit</button> -->
         <div class="submit_button" onclick="submit()">
           <h2>Generate</h2>
-
         </div>
 
 
       </div>
 
       <div class="canvas-container">
+        <h1 class="base_text">Fractal to come :)<br></h1>
+        <h1 class="base_text_follow">After clicking generate, wait for the browser to load the fractal :)</h1>
         <canvas id="frac1" class="canvas">
 
 

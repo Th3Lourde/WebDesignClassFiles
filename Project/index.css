@@ -3,7 +3,7 @@
   margin:0;
   padding:0;
   font-family: 'Roboto', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 a {
@@ -12,6 +12,12 @@ a {
 }
 
 input {
+  margin-bottom: 35px;
+  width: 30px;
+  height: 20px;
+}
+
+.last_input {
   margin-bottom: 10px;
 }
 
@@ -46,6 +52,7 @@ input {
   /* width: calc(1500px + 10vw); */
   width: 80vw;
   height: calc(100vh - 10vh - 4px);
+  display: none;
 
   /* width: 600px; */
 
@@ -60,6 +67,8 @@ input {
 
 .canvas-container {
   background-color: black;
+  color: white;
+  margin: auto;
   /* background-color: white; */
   /* background-color: #6C757D; */
   /* padding-left:10vw; */
@@ -70,13 +79,25 @@ input {
   /* height: calc(100vh - 10vh - 25px); */
 }
 
+.base_text {
+  margin-left: 55vw;
+  padding-top: 40vh;
+}
+
+.base_text_follow {
+  margin-left: 40vw;
+  padding-top: 1vh;
+}
+
 .fractal-options-container {
   float: left;
-  height: calc(100vh - 10vh - 100vh/2 - 35vh);
+  /* height: calc(100vh - 10vh - 100vh/2 - 35vh); */
+  height: calc(100vh - 40vh);
   width: 20vw;
-  padding-top: calc(100vh/2 - 35vh);
+  padding-top: calc(100vh/2 - 23vh);
   /* width: calc(100vw - 1500px - 10vw); */
   background-color: black;
+  /* background-color: white; */
   color:white;
   text-align: center;
 }
@@ -110,7 +131,6 @@ input {
 }
 
 .submit_button {
-
   width:125px;
   height:30px;
   background-color: black;
@@ -152,7 +172,6 @@ input {
   margin:0px auto;
 }
 
-
 .container {
   margin: 0 auto;
   padding: 40px;
@@ -166,4 +185,9 @@ input {
   color: #419be0;
   /* background: black; */
   /* background: white; */
+}
+
+.padding-below {
+  padding-bottom: 15px;
+
 }

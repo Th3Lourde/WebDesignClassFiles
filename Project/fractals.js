@@ -161,9 +161,20 @@ function create_mandel(data){
 }
 
 function submit() {
+
+  // Update background image so the user knows that it is loading
+  // Also change the display of the canvas so it can be seen by the user
+  // $('.base_text').html("Fractal Loading");
+
+  // sleep(2);
+
+  $('.base_text, .base_text_follow').css("display","none");
+  $('.canvas').css("display","block");
+
   input = get_mandel();
   console.log(input);
   create_mandel(input);
+
 
   // input
 

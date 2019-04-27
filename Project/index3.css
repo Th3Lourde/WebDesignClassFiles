@@ -82,9 +82,10 @@ display: none;
 }
 
 .footer {
-  width: calc(100vw);
+  width: calc(100vw - 15px);
   height: calc(15vh - 50px);
   padding-top: 50px;
+  padding-right: 15px;
   /* padding-right: 55px; */
   background-color:black;
   color: white;
@@ -364,7 +365,7 @@ display: none;
 
 .footer-conclusion {
   position: absolute;
-  right: 10px;
+  right: 35px;
   font-weight: 300;
 }
 
